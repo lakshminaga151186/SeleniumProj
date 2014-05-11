@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="95515" started-at="2014-05-09T18:37:51Z" finished-at="2014-05-09T18:39:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="95515" started-at="2014-05-09T18:37:51Z" finished-at="2014-05-09T18:39:26Z">
+      <class name="TestNG.CaptureScreenshot">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestNG.CaptureScreenshot@741bb804]" name="beforeTest" is-config="true" duration-ms="82672" started-at="2014-05-10T00:07:51Z" finished-at="2014-05-10T00:09:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="f()[pri:0, instance:TestNG.CaptureScreenshot@741bb804]" name="f" duration-ms="12813" started-at="2014-05-10T00:09:13Z" finished-at="2014-05-10T00:09:26Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"link text","selector":"Add-ons"}
+Command duration or timeout: 2.22 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'satchinu-PC', ip: '192.168.1.101', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
+Session ID: eb9303b1-4261-406a-bafb-973e6107f980
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"link text","selector":"Add-ons"}
+Command duration or timeout: 2.22 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'satchinu-PC', ip: '192.168.1.101', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
+Session ID: eb9303b1-4261-406a-bafb-973e6107f980
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:356)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:248)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at TestNG.CaptureScreenshot.clickelements(CaptureScreenshot.java:28)
+	at TestNG.CaptureScreenshot.f(CaptureScreenshot.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"link text","selector":"Add-ons"}
+Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
+System info: host: 'satchinu-PC', ip: '192.168.1.101', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8869)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10831)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10836)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10778)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestNG.CaptureScreenshot@741bb804]" name="afterTest" is-config="true" duration-ms="1" started-at="2014-05-10T00:09:26Z" finished-at="2014-05-10T00:09:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestNG.CaptureScreenshot -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

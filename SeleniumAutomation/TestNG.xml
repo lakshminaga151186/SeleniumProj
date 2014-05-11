@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "spicejet test suite">
+<test name = "spicejet test report">
+<classes>
+<class name = "TestNG.Spicejet_verify">
+<methods>
+<include name = "verifyOnewaySearch"></include>
+<include name = "verifyjavascripyalerts"></include>
+<include name = "verifypopup"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>
