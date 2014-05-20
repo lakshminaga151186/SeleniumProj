@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 10 00:07:51 IST 2014</td>
+<td>Started on:</td><td>Tue May 20 13:35:52 IST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>95 seconds (95515 ms)</td>
+<tr><td>Total time:</td><td>122 seconds (122826 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,13 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestNG.CaptureScreenshot.f()'><b>f</b><br>Test class: TestNG.CaptureScreenshot</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Add-ons&quot;}
-Command duration or timeout: 2.22 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td title='dataDriven.Spicejet.reusablescript()'><b>reusablescript</b><br>Test class: dataDriven.Spicejet</td>
+<td><div><pre>org.openqa.selenium.NoAlertPresentException: No alert is present (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.31 seconds
 Build info: version: &apos;2.39.0&apos;, revision: &apos;ff23eac&apos;, time: &apos;2013-12-16 16:11:15&apos;
-System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Session ID: eb9303b1-4261-406a-bafb-973e6107f980
+System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.100&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: fa00966f-75bb-472a-b1d2-2d202f08e865
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -91,12 +90,9 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:356)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:248)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at TestNG.CaptureScreenshot.clickelements(CaptureScreenshot.java:28)
-	at TestNG.CaptureScreenshot.f(CaptureScreenshot.java:37)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:848)
+	at dataDriven.Spicejet.reusablescript(Spicejet.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -121,22 +117,12 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Add-ons&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace1392653654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1392653654'><pre>org.openqa.selenium.NoAlertPresentException: No alert is present (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.31 seconds
 Build info: version: &apos;2.39.0&apos;, revision: &apos;ff23eac&apos;, time: &apos;2013-12-16 16:11:15&apos;
-System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8869)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10831)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10836)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10778)
-</pre></div><a href='#' onClick='toggleBox("stack-trace800555403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace800555403'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Add-ons&quot;}
-Command duration or timeout: 2.22 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.39.0&apos;, revision: &apos;ff23eac&apos;, time: &apos;2013-12-16 16:11:15&apos;
-System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Session ID: eb9303b1-4261-406a-bafb-973e6107f980
+System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.100&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: fa00966f-75bb-472a-b1d2-2d202f08e865
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -146,12 +132,9 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:356)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:248)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
-	at TestNG.CaptureScreenshot.clickelements(CaptureScreenshot.java:28)
-	at TestNG.CaptureScreenshot.f(CaptureScreenshot.java:37)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:848)
+	at dataDriven.Spicejet.reusablescript(Spicejet.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -176,18 +159,9 @@ Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSele
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Add-ons&quot;}
-Build info: version: &apos;2.39.0&apos;, revision: &apos;ff23eac&apos;, time: &apos;2013-12-16 16:11:15&apos;
-System info: host: &apos;satchinu-PC&apos;, ip: &apos;192.168.1.101&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8869)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10831)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10836)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/satchinu/AppData/Local/Temp/anonymous5455267593183950757webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10778)
 </pre></div></td>
-<td>12</td>
-<td>TestNG.CaptureScreenshot@741bb804</td></tr>
+<td>30</td>
+<td>dataDriven.Spicejet@523f39f2</td></tr>
 </table><p>
 </body>
 </html>

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="TestNG.CaptureScreenshot">
+      <class name="dataDriven.Spicejet">
         <methods>
-          <include name="f"/>
-          <include name="afterTest"/>
+          <include name="reusablescript"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- TestNG.CaptureScreenshot -->
+      </class> <!-- dataDriven.Spicejet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
