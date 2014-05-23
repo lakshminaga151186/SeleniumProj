@@ -1,76 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="1" failed="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122826" started-at="2014-05-20T08:05:52Z" finished-at="2014-05-20T08:07:55Z">
+  <suite name="Hybrid" duration-ms="108660" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:33:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="122826" started-at="2014-05-20T08:05:52Z" finished-at="2014-05-20T08:07:55Z">
-      <class name="dataDriven.Spicejet">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:dataDriven.Spicejet@523f39f2]" name="beforeTest" is-config="true" duration-ms="92793" started-at="2014-05-20T13:35:52Z" finished-at="2014-05-20T13:37:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="reusablescript()[pri:0, instance:dataDriven.Spicejet@523f39f2]" name="reusablescript" duration-ms="30002" started-at="2014-05-20T13:37:25Z" finished-at="2014-05-20T13:37:55Z">
-          <exception class="org.openqa.selenium.NoAlertPresentException">
+    <test name="DataDriven chrome" duration-ms="170" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:31:44Z">
+      <class name="dataDriven.DriverScript">
+        <test-method status="FAIL" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@27d0820]" name="beforeTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[No alert is present (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.31 seconds
-Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
-System info: host: 'satchinu-PC', ip: '192.168.1.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
-Session ID: fa00966f-75bb-472a-b1d2-2d202f08e865
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]]]>
+              <![CDATA[The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see http://code.google.com/p/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: No alert is present (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.31 seconds
-Build info: version: '2.39.0', revision: 'ff23eac', time: '2013-12-16 16:11:15'
-System info: host: 'satchinu-PC', ip: '192.168.1.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
-Session ID: fa00966f-75bb-472a-b1d2-2d202f08e865
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=29.0.1}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:848)
-	at dataDriven.Spicejet.reusablescript(Spicejet.java:70)
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see http://code.google.com/p/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:177)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:105)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:75)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:107)
+	at dataDriven.DriverScript.beforeTest(DriverScript.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- reusablescript -->
-      </class> <!-- dataDriven.Spicejet -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@27d0820]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="SKIP" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@27d0820]" name="reUsableScript" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reUsableScript -->
+      </class> <!-- dataDriven.DriverScript -->
+    </test> <!-- DataDriven chrome -->
+    <test name="DataDriven ie" duration-ms="39767" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:32:24Z">
+      <class name="dataDriven.DriverScript">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@158bea4]" name="beforeTest" is-config="true" duration-ms="4362" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@158bea4]" name="reUsableScript" duration-ms="35395" started-at="2014-05-21T21:01:48Z" finished-at="2014-05-21T21:02:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reUsableScript -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@158bea4]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:02:24Z" finished-at="2014-05-21T21:02:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- dataDriven.DriverScript -->
+    </test> <!-- DataDriven ie -->
+    <test name="DataDriven firefox" duration-ms="108660" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:33:33Z">
+      <class name="dataDriven.DriverScript">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="beforeTest" is-config="true" duration-ms="79944" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:03:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="reUsableScript" duration-ms="28706" started-at="2014-05-21T21:03:04Z" finished-at="2014-05-21T21:03:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reUsableScript -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:03:33Z" finished-at="2014-05-21T21:03:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- dataDriven.DriverScript -->
+    </test> <!-- DataDriven firefox -->
+  </suite> <!-- Hybrid -->
 </testng-results>

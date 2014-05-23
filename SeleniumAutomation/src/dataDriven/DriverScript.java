@@ -5,15 +5,19 @@ import java.io.FileInputStream;
 import jxl.Sheet;
 import jxl.Workbook;
 
+import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverBackedSelenium;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
+import com.beust.jcommander.Parameter;
 import com.thoughtworks.selenium.Selenium;
 
 public class DriverScript {
@@ -89,14 +93,29 @@ for (int i = 1; i < s.getRows(); i++) {
 		driver.findElement(By.id(s.getCell(0, i).getContents())).click();
 	}*/
 	
-	
-	
 }
   }
+  @org.testng.annotations.Parameters("browser")
   @BeforeTest
-  public void beforeTest() {		
-		driver=new FirefoxDriver();
-		selenium=new org.openqa.selenium.WebDriverBackedSelenium(driver, "http://www.spicejet.com");
+  public void beforeTest(String str) {
+	  if (str.equalsIgnoreCase("chrome")) 
+	  {
+		System.setProperty("webdriver.chome.driver", "E:\\softwares\\SeleniumDump\\Lib\\chromedriver.exe");
+		driver = new ChromeDriver();
+		selenium = new WebDriverBackedSelenium(driver, "http://www.mail.in.com");
+	  }
+	  if (str.equalsIgnoreCase("ie")) 
+	  {
+		System.setProperty("webdriver.ie.driver", "E:\\softwares\\SeleniumDump\\Lib\\IEDriverServer.exe");
+		driver = new InternetExplorerDriver();
+		selenium = new WebDriverBackedSelenium(driver, "http://www.mail.in.com");
+	  }
+	  if (str.equalsIgnoreCase("firefox")) 
+	  {
+		  driver=new FirefoxDriver();
+		selenium=new org.openqa.selenium.WebDriverBackedSelenium(driver, "http://www.mail.in.com");
+	  }
+		
 		//driver.get("http://mail.in.com");
 		//driver.findElement(By.cssSelector("input.registernow")).click();
   }

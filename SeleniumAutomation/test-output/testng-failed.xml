@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Hybrid]" parallel="tests">
+  <parameter name="browser" value="ie"/>
+  <test name="DataDriven chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="dataDriven.Spicejet">
+      <class name="dataDriven.DriverScript">
         <methods>
-          <include name="reusablescript"/>
+          <include name="reUsableScript"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- dataDriven.Spicejet -->
+      </class> <!-- dataDriven.DriverScript -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- DataDriven chrome(failed) -->
+</suite> <!-- Failed suite [Hybrid] -->

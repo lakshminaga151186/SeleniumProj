@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dataDriven.Spicejet">
+      <class name="dataDriven.DriverScript">
         <methods>
-          <include name="reusablescript"/>
-          <include name="beforeTest"/>
+          <include name="reUsableScript"/>
         </methods>
-      </class> <!-- dataDriven.Spicejet -->
+      </class> <!-- dataDriven.DriverScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

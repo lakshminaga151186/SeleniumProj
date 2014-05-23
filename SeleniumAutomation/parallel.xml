@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Hybrid" parallel="tests">
+<test name="DataDriven chrome">
+<classes>
+<parameter name="browser" value="chrome"></parameter>
+<class name="dataDriven.DriverScript"></class>
+</classes>
+</test>
+<test name="DataDriven firefox">
+<classes>
+<parameter name="browser" value="firefox"></parameter>
+<class name="dataDriven.DriverScript"></class>
+</classes>
+</test>
+<test name="DataDriven ie">
+<classes>
+<parameter name="browser" value="ie"></parameter>
+<class name="dataDriven.DriverScript"></class>
+</classes>
+</test>
+</suite>
