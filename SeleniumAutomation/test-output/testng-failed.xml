@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Hybrid]" parallel="tests">
-  <parameter name="browser" value="ie"/>
-  <test name="DataDriven chrome(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="dataDriven.DriverScript">
+      <class name="TestNG.Gmail_Overiding">
         <methods>
-          <include name="reUsableScript"/>
+          <include name="verifylanguages"/>
+          <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
         </methods>
-      </class> <!-- dataDriven.DriverScript -->
+      </class> <!-- TestNG.Gmail_Overiding -->
     </classes>
-  </test> <!-- DataDriven chrome(failed) -->
-</suite> <!-- Failed suite [Hybrid] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -2,18 +2,14 @@ package dataDriven;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.List;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.write.Label;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -29,18 +25,9 @@ public class Spicejet {
 	  FileInputStream fi = new FileInputStream("E:\\Testing projects\\testdata\\Spicejetinputdat.xls");
 	  Workbook w = Workbook.getWorkbook(fi);
 	  Sheet s =w.getSheet(0);
-	  /*FileOutputStream fo = new FileOutputStream("E:\\Testing projects\\Results\\Spicejetresults.xls");
+	  FileOutputStream fo = new FileOutputStream("E:\\Testing projects\\Results\\Spicejetresults1.xls");
 	  WritableWorkbook wb = Workbook.createWorkbook(fo);
-	  WritableSheet ws = wb.createSheet("Results", 0);*/
-	  /*System.out.println("--Origin Station Link--"+selenium.isElementPresent("ctl00_mainContent_ddl_originStation1_CTXT"));
-	  selenium.click("ctl00_mainContent_ddl_originStation1_CTXT");
-	  selenium.click("link=Hyderabad (HYD)");
-	  Thread.sleep(1000);
-	  List<WebElement> elements=driver.findElements(By.xpath("//a[@text='Tirupati (TIR)']"));
-	  for(WebElement element:elements){
-		  if(element.isDisplayed())
-			  element.click();
-	  }*/
+	  WritableSheet ws = wb.createSheet("Results", 0);
 	  for (int c = 3; c < s.getColumns(); c++) 
 	  {
 		  for (int i = 1; i < s.getRows(); i++) 
@@ -93,7 +80,7 @@ public class Spicejet {
 					driver.switchTo().alert().dismiss();
 				}
 			}
-			/*Label results = new Label(9, i, str);
+			Label results = new Label(9, i, str);
 			ws.addCell(results);
 			for (int j = 0; j < s.getColumns(); j++) {
 				System.out.println(s.getCell(j, i).getContents());
@@ -109,13 +96,12 @@ public class Spicejet {
 			  ws.addCell(dn);
 			  ws.addCell(ot);
 			  ws.addCell(td);
-			  ws.addCell(rs);*/
+			  ws.addCell(rs);
 		 }
-	 }
-	  /*wb.write();
-	  wb.close();*/
+	  wb.write();
+	  wb.close();
+	  }
  }
-  
   @BeforeTest
   public void beforeTest() {
 	  driver = new FirefoxDriver();

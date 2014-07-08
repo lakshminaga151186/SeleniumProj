@@ -2,7 +2,7 @@ package corejava;
 
 import com.thoughtworks.selenium.DefaultSelenium;
 
-public class Gmail_Login {
+public class Gmail_Login extends allbrowsers {
  
 	public static void main(String[] arg){
 		DefaultSelenium log = new DefaultSelenium("localhost", 4444, "*firefox", "https://mail.google.com");

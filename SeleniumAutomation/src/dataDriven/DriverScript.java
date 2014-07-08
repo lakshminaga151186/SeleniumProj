@@ -24,81 +24,88 @@ public class DriverScript {
 	public WebDriver driver;
 	public Selenium selenium;
 	public String str;
+	private static int x;
   @Test
-  public void reUsableScript() throws Exception{
-FileInputStream fi=new FileInputStream("E:\\workspace 1\\SeleniumAutomation_15May_6PM\\Testdata\\Register.xls");	  
-Workbook w=Workbook.getWorkbook(fi);
-Sheet s=w.getSheet(0);
-for (int i = 1; i < s.getRows(); i++) {
-	if(s.getCell(2, i).getContents().equalsIgnoreCase("textbox"))
-	{
-		if(selenium.isElementPresent(s.getCell(0, i).getContents()))
+ /* public void testMod1Mod2()throws Exception{
+	  reUsableScript("first.xls");
+	  reUsableScript("second.xls");
+  }*/
+  
+  private void reUsableScript() throws Exception{
+	FileInputStream fi=new FileInputStream("E:\\workspace 1\\SeleniumAutomation_15May_6PM\\Testdata\\Register.xls");
+	//FileInputStream fi=new FileInputStream(fileName);
+	Workbook w=Workbook.getWorkbook(fi);
+	Sheet s=w.getSheet(0);
+	for (int i = 1; i < s.getRows(); i++) {
+		if(s.getCell(2, i).getContents().equalsIgnoreCase("textbox"))
 		{
-		selenium.type(s.getCell(0, i).getContents(), s.getCell(3, i).getContents());
-//driver.findElement(By.id(s.getCell(0, i).getContents())).sendKeys(s.getCell(3, i).getContents());
-		str="Pass";
-		}else{
-			str="Fail";
-			System.out.println("Not available");
+			if(selenium.isElementPresent(s.getCell(0, i).getContents()))
+			{
+			selenium.type(s.getCell(0, i).getContents(), s.getCell(3, i).getContents());
+	//driver.findElement(By.id(s.getCell(0, i).getContents())).sendKeys(s.getCell(3, i).getContents());
+			str="Pass";
+			}else{
+				str="Fail";
+				System.out.println("Not available");
+			}
 		}
-	}
-	else if(s.getCell(2, i).getContents().equalsIgnoreCase("dropdown"))
-	{
-		if(selenium.isElementPresent(s.getCell(0, i).getContents()))
+		else if(s.getCell(2, i).getContents().equalsIgnoreCase("dropdown"))
 		{
-		selenium.select(s.getCell(0, i).getContents(), s.getCell(3, i).getContents());
-//new Select(driver.findElement(By.id(s.getCell(0, i).getContents()))).selectByVisibleText(s.getCell(3, i).getContents());
-		str="Pass";
-		}else{
-			str="Fail";
-			System.out.println("Not available");
+			if(selenium.isElementPresent(s.getCell(0, i).getContents()))
+			{
+			selenium.select(s.getCell(0, i).getContents(), s.getCell(3, i).getContents());
+	//new Select(driver.findElement(By.id(s.getCell(0, i).getContents()))).selectByVisibleText(s.getCell(3, i).getContents());
+			str="Pass";
+			}else{
+				str="Fail";
+				System.out.println("Not available");
+			}
 		}
-	}
-	else if(s.getCell(2, i).getContents().equalsIgnoreCase("radiobutton")
-			||s.getCell(2, i).getContents().equalsIgnoreCase("button")
-			||s.getCell(2, i).getContents().equalsIgnoreCase("checkbox")
-			||s.getCell(2, i).getContents().equalsIgnoreCase("link"))
-	{
-		if(selenium.isElementPresent(s.getCell(0, i).getContents()))
-		{	
-		//driver.findElement(By.xpath(s.getCell(0, i).getContents())).click();
-		selenium.click(s.getCell(0, i).getContents());
-		str="Pass";
-		}else{
-			str="Fail";
-			System.out.println("Not available");
-		}
-	}
-	else if(s.getCell(2, i).getContents().equalsIgnoreCase("url"))
-	{
-		driver.get(s.getCell(0, i).getContents());
-		str="Pass";
-	}
-	else if(s.getCell(2, i).getContents().equalsIgnoreCase("wait"))
-	{
-		Thread.sleep(4000);
-	}
-	else if(s.getCell(2, i).getContents().equalsIgnoreCase("alert"))
-	{
-		if(s.getCell(3, i).getContents().equalsIgnoreCase("ok"))
+		else if(s.getCell(2, i).getContents().equalsIgnoreCase("radiobutton")
+				||s.getCell(2, i).getContents().equalsIgnoreCase("button")
+				||s.getCell(2, i).getContents().equalsIgnoreCase("checkbox")
+				||s.getCell(2, i).getContents().equalsIgnoreCase("link"))
 		{
-			driver.switchTo().alert().accept();
-		}else{
-			driver.switchTo().alert().dismiss();
+			if(selenium.isElementPresent(s.getCell(0, i).getContents()))
+			{	
+			//driver.findElement(By.xpath(s.getCell(0, i).getContents())).click();
+			selenium.click(s.getCell(0, i).getContents());
+			str="Pass";
+			}else{
+				str="Fail";
+				System.out.println("Not available");
+			}
 		}
+		else if(s.getCell(2, i).getContents().equalsIgnoreCase("url"))
+		{
+			driver.get(s.getCell(0, i).getContents());
+			str="Pass";
+		}
+		else if(s.getCell(2, i).getContents().equalsIgnoreCase("wait"))
+		{
+			Thread.sleep(4000);
+		}
+		else if(s.getCell(2, i).getContents().equalsIgnoreCase("alert"))
+		{
+			if(s.getCell(3, i).getContents().equalsIgnoreCase("ok"))
+			{
+				driver.switchTo().alert().accept();
+			}else{
+				driver.switchTo().alert().dismiss();
+			}
+		}
+	/*	else if(s.getCell(2, i).getContents().equalsIgnoreCase("button"))
+		{
+			Thread.sleep(1000);
+			driver.findElement(By.id(s.getCell(0, i).getContents())).click();
+		}*/
+		
 	}
-/*	else if(s.getCell(2, i).getContents().equalsIgnoreCase("button"))
-	{
-		Thread.sleep(1000);
-		driver.findElement(By.id(s.getCell(0, i).getContents())).click();
-	}*/
-	
-}
   }
-  @org.testng.annotations.Parameters("browser")
+  //@org.testng.annotations.Parameters("browser")
   @BeforeTest
-  public void beforeTest(String str) {
-	  if (str.equalsIgnoreCase("chrome")) 
+  public void beforeTestMethod(String str){
+   if (str.equalsIgnoreCase("chrome")) 
 	  {
 		System.setProperty("webdriver.chome.driver", "E:\\softwares\\SeleniumDump\\Lib\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -118,10 +125,6 @@ for (int i = 1; i < s.getRows(); i++) {
 		
 		//driver.get("http://mail.in.com");
 		//driver.findElement(By.cssSelector("input.registernow")).click();
-  }
-
-  @AfterTest
-  public void afterTest() {
   }
 
 }

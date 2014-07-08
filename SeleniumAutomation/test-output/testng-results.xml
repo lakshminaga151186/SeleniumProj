@@ -1,110 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Hybrid" duration-ms="108660" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:33:33Z">
+  <suite name="Default suite" duration-ms="83290" started-at="2014-07-08T11:49:20Z" finished-at="2014-07-08T11:50:44Z">
     <groups>
     </groups>
-    <test name="DataDriven chrome" duration-ms="170" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:31:44Z">
-      <class name="dataDriven.DriverScript">
-        <test-method status="FAIL" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@27d0820]" name="beforeTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see http://code.google.com/p/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see http://code.google.com/p/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:177)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:105)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:75)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:107)
-	at dataDriven.DriverScript.beforeTest(DriverScript.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+    <test name="Default test" duration-ms="83290" started-at="2014-07-08T11:49:20Z" finished-at="2014-07-08T11:50:44Z">
+      <class name="pagefactory.LoginTestPage">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:pagefactory.LoginTestPage@13710065]" name="beforeMethod" is-config="true" duration-ms="80578" started-at="2014-07-08T17:19:20Z" finished-at="2014-07-08T17:20:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="SKIP" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@27d0820]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="testLoginPage()[pri:0, instance:pagefactory.LoginTestPage@13710065]" name="testLoginPage" duration-ms="2681" started-at="2014-07-08T17:20:41Z" finished-at="2014-07-08T17:20:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="SKIP" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@27d0820]" name="reUsableScript" duration-ms="0" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reUsableScript -->
-      </class> <!-- dataDriven.DriverScript -->
-    </test> <!-- DataDriven chrome -->
-    <test name="DataDriven ie" duration-ms="39767" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:32:24Z">
-      <class name="dataDriven.DriverScript">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@158bea4]" name="beforeTest" is-config="true" duration-ms="4362" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:01:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ie]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@158bea4]" name="reUsableScript" duration-ms="35395" started-at="2014-05-21T21:01:48Z" finished-at="2014-05-21T21:02:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reUsableScript -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@158bea4]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:02:24Z" finished-at="2014-05-21T21:02:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- dataDriven.DriverScript -->
-    </test> <!-- DataDriven ie -->
-    <test name="DataDriven firefox" duration-ms="108660" started-at="2014-05-21T15:31:44Z" finished-at="2014-05-21T15:33:33Z">
-      <class name="dataDriven.DriverScript">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="beforeTest" is-config="true" duration-ms="79944" started-at="2014-05-21T21:01:44Z" finished-at="2014-05-21T21:03:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="reUsableScript()[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="reUsableScript" duration-ms="28706" started-at="2014-05-21T21:03:04Z" finished-at="2014-05-21T21:03:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reUsableScript -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDriven.DriverScript@331ee18e]" name="afterTest" is-config="true" duration-ms="0" started-at="2014-05-21T21:03:33Z" finished-at="2014-05-21T21:03:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- dataDriven.DriverScript -->
-    </test> <!-- DataDriven firefox -->
-  </suite> <!-- Hybrid -->
+        </test-method> <!-- testLoginPage -->
+      </class> <!-- pagefactory.LoginTestPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
